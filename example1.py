@@ -8,7 +8,7 @@ start = time.time()
 alarms[0] = start + delays[0]
 alarms[1] = start + delays[1]
 alarms[2] = start + delays[2]
-
+  
 while True:
     for i in range(0,3):
         now = time.time()
@@ -17,3 +17,4 @@ while True:
             alarms[i] = now + delays[i]
     time.sleep(1)
     print(f"time elapsed is {round(time.time() - start,3)}")
+    

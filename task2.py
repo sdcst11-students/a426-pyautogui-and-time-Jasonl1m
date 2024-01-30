@@ -1,7 +1,6 @@
 #!working with time
 
-import random
-import keyboard
+
 import time
 
 """
@@ -32,11 +31,14 @@ appropriate use of return values and input parameters
 # a variable. We will use it as the basis for this 
 # assignment.
 
-while True:
-    y = keyboard.read_key()
-    print(y)
-    print(time.now())
-    t = time.localtime()
-    print(t)
-    print(time.strftime("%H",t))
-    break
+def display_characters(characters):
+    start_time = time.time()
+
+    for char in characters:
+        input(f"Press '{char}' and Enter to continue: ")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"\nTime taken to press all 10 charcters: {elapsed_time:.2f} seconds.")
+
+characters_to_display = "abcdefghij"
+display_characters(characters_to_display)
